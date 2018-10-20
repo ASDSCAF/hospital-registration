@@ -50,7 +50,7 @@ select,input{
 	position: absolute;
 	right: 0px;
 	top: 29px;
-	background-color: orange; 
+	/*background-color: orange; */
 }
 
 /* #nav 模块内样式*/
@@ -259,18 +259,18 @@ select,input{
 	font-size: 14px;
 }
 /* 医院列表容器*/
-.content-tab .block-content  .block-list{}
+.content-tab .block-content .block-list{}
 
-.content-tab .block-content  .block-list .item{
+.content-tab .block-content .block-list .item{
 	float: left;
 	width: 216px;
 	height: 102px;
-	padding: 0 20px 10px 102px;
+	padding: 0 20px 10px 120px;
 	position: relative;
 	font-size: 12px;
 }
 
-.content-tab .block-content  .block-list .item img{
+.content-tab .block-content .block-list .item img{
 	width: 110px;
 	height: 98px;
 	position: absolute;
@@ -278,19 +278,19 @@ select,input{
 	top: 0;
 }
 
-.content-tab .block-content  .block-list .item-name{
+.content-tab .block-content .block-list .item-name{
 	color: #036ed7;
 	font-size: 14px;
 	line-height: 21px;
 	padding-top: 13px;
 }
-.content-tab .block-content  .block-list .item-level{
+.content-tab .block-content .block-list .item-level{
 	float: right;
 	font-size: 12px;
 	color: #979797;
 }
-.content-tab .block-content  .block-list .item-phone,
-.content-tab .block-content  .block-list .item-address{
+.content-tab .block-content .block-list .item-phone,
+.content-tab .block-content .block-list .item-address{
 	line-height: 18px;
 	padding-bottom: 4px;
 	color: #666;
@@ -298,6 +298,27 @@ select,input{
 
 /* 医院文案列表容器*/
 
-.block-text-list{
+.content-tab .block-content .block-text-list{
 	
+}
+
+.content-tab .block-content .block-text-list .item{
+	display: block;
+	width: 351px;
+	height: 27px;
+	font-size: 14px;
+	color: #666;
+	padding-top: 8px;
+	float: left;
+	border-bottom: 1px dashed #dcdddd;
+}
+
+.content-tab .block-content .block-text-list .item:nth-child(2n){/*隔行选择器*/
+	margin-left: 13px;
+} 
+.footer{
+	text-align: center;
+	line-height: 70px;
+	font-size: 12px;
+	color: #666;
 }

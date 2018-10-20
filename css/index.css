@@ -8,7 +8,7 @@ body{
 	height: 0;
 	line-height: 0;
 	clear: both;
-	zoom: s1;
+	zoom: 1;
 }
 
 .wrap{
@@ -82,8 +82,9 @@ body{
 }
 
 .footer{
-	height: 132px;
-	padding: 25px 0 25px 0;
+	height: 70px;
+	padding: 25px 0; 
+	background-color: #eceef2;
 }
 
 
