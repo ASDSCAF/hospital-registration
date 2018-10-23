@@ -27,8 +27,8 @@ $.fn.UiSearh=function(){
 */
 $.fn.UiTab=function(header,content,focus_prefix){
 	var ui = $(this);
-	var tabs=$(header+'> .item ',ui);
-	var cons=$(content+'> .item ',ui);
+	var tabs=$(header,ui);
+	var cons=$(content,ui);
 	var focus_prefix=focus_prefix || '';
 
 	tabs.on('click',function () {
@@ -40,29 +40,6 @@ $.fn.UiTab=function(header,content,focus_prefix){
 		return false;
 	})
 }
-// ui-backTop 回到顶部 1 有BUG 已废弃
-// $.fn.UiBackTop = function(){
-// 	var ui = $(this);
-// 	var el =$('<a class="ui-backTop" href="#0">up</a>');
-// 	ui.append( el );
-
-// 	var windowHeight=$(window).height();
-
-// 	$(window).on('scroll',function(){
-// 		var top=$('body').scrollTop();
-// 		// console.log(top);
-// 		if (top > windowHeight) {
-// 			el.show();
-// 		}else{
-// 			el.hide();
-// 		}
-
-// 	});
-// 	el.on('click',function(){
-// 		$(window).scrollTop(0);
-// 	})
-// }
-
 //ui-slider
 //1.左右镜头控制翻页
 //2.翻页的时候下面的进度点可以点击使用翻页
@@ -115,7 +92,7 @@ $.fn.UiSlider=function(){
 		if (current>=size-1) {
 			current=-1;//负一加1等于0
 		}
-		current =current+1;
+		current = current+1;
 	})
 	.on('move_to',function(evt,index){
 		// debugger;
@@ -123,6 +100,7 @@ $.fn.UiSlider=function(){
 		tips.removeClass('item_focus').eq(index).addClass('item_focus');
 	})
 	.on('auto_move',function(){
+
 		setInterval(function(){
 			enableAuto && wrap.triggerHandler('move_next'); 
 		},3000);
@@ -148,7 +126,7 @@ $(function () {
 	$('.ui-search').UiSearh();
 
 	$('.content-tab').UiTab('.caption> .item','.block > .item');
-	$('.content-tab .block .item').UiTab('.block-caption> a','.block-caption > .block-wrap','block-caption-');
+	$('.content-tab .block .item').UiTab('.block-caption> a','.block-content > .block-wrap','block-caption-');
 
 	// $('body').UiBackTop();
 
